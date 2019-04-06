@@ -23,13 +23,18 @@ public class Test : MonoBehaviour {
 	private void InteractionController () {
 		if(uiOpen)
 		{
+			if(Input.GetButtonDown("Pause"))
+			{
+				uiOpen = false;
+			}
+
 			uiPanel.SetActive(true);
 
 		} else {
 			uiPanel.SetActive(false);
 		}
 
-		if(inRange)
+		if(inRange && !uiOpen)
 		{
 			if(Input.GetButtonDown("Interact"))
 			{
