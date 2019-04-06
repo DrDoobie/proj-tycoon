@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-	public bool uiOpen, paused;
-	public GameObject uiPanel;
+	[HideInInspector] public bool paused;
 
 	private void Update () {
 		PauseController();
-		UIController();
 	}
 
 	private void PauseController () {
@@ -27,21 +25,6 @@ public class GameController : MonoBehaviour {
 
 		CursorLock(true);
 		Time.timeScale = 1.0f;
-	}
-
-	private void UIController () {
-		if(Input.GetButtonDown("UI"))
-		{
-			uiOpen = !uiOpen;
-		}
-
-		if(uiOpen)
-		{
-			uiPanel.SetActive(true);
-			return;
-		}
-
-		uiPanel.SetActive(false);
 	}
 
 	public void CursorLock (bool bol) {

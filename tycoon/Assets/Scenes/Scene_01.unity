@@ -232,6 +232,16 @@ Prefab:
       propertyPath: ui
       value: 
       objectReference: {fileID: 994924439}
+    - target: {fileID: 114803418836269062, guid: 27cd9b20049b25044bac74cda3469b38,
+        type: 2}
+      propertyPath: text
+      value: open shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 114803418836269062, guid: 27cd9b20049b25044bac74cda3469b38,
+        type: 2}
+      propertyPath: uiPanel
+      value: 
+      objectReference: {fileID: 994924439}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27cd9b20049b25044bac74cda3469b38, type: 2}
   m_IsPrefabAsset: 0
@@ -806,9 +816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcd5eb813daf5d4581350df7487d5ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiOpen: 0
   paused: 0
-  uiPanel: {fileID: 994924439}
 --- !u!1 &994924439
 GameObject:
   m_ObjectHideFlags: 0
