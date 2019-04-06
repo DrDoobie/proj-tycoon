@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Test : MonoBehaviour {
+public class Interactable : MonoBehaviour {
 
 	bool uiOpen = false, inRange = false;
 	public GameObject uiPanel;

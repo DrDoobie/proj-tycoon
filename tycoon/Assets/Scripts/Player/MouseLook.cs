@@ -6,15 +6,20 @@ public class MouseLook : MonoBehaviour
 {
 
     public bool invertedMouseY = false;
+    private GameController gameController;
     [SerializeField] private float mouseSens = 7.5f;
     private float xClamp = 0.0f;
 
     private void Awake() {
+        gameController = FindObjectOfType<GameController>();
         CursorLock();
     }
 
     private void Update() {
-        LookController();
+        if(!gameController.paused)
+        {
+            LookController();
+        }
     }
 
     private void CursorLock() {
