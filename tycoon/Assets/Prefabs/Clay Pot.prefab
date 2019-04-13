@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4714272229153588}
   - component: {fileID: 65015643465960122}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Clay Pot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4056102016265688}
   - component: {fileID: 33090782640341440}
   - component: {fileID: 23475445415642140}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
