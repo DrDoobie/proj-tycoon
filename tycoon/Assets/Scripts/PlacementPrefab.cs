@@ -34,7 +34,7 @@ public class PlacementPrefab : MonoBehaviour {
     }
 
     private void OnTriggerEnter (Collider other) {
-        if(other.gameObject.layer == 9)
+        if(other.gameObject.layer == 9  )
         {
             placeable = false;
             Debug.Log("AWD");

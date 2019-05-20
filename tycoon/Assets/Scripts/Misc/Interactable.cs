@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Interactable : MonoBehaviour {
 
-	bool uiOpen = false, inRange = false;
+	public bool uiOpen = false, inRange = false;
 	public GameObject uiPanel;
 	public string text;
 	private GameController gameController;
@@ -21,7 +21,7 @@ public class Interactable : MonoBehaviour {
 	}
 
 	private void InteractionController () {
-		if(uiOpen)
+		/*if(uiOpen)
 		{
 			if(Input.GetButtonDown("Pause"))
 			{
@@ -40,6 +40,27 @@ public class Interactable : MonoBehaviour {
 			{
 				uiOpen = !uiOpen;
 				gameController.paused = true;
+			}
+
+			interactText.text = "'e' to " + text;
+			return;
+		}
+
+		interactText.text = null; */
+
+		if(uiOpen)
+		{
+			uiPanel.SetActive(true);
+
+		} else {
+			uiPanel.SetActive(false);
+		}
+
+		if(inRange)
+		{
+			if(Input.GetButtonDown("Interact"))
+			{
+				uiOpen = !uiOpen;
 			}
 
 			interactText.text = "'e' to " + text;
