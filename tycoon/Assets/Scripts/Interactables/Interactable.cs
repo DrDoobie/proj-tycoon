@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Interactable : MonoBehaviour {
 
-	public bool uiOpen = false, inRange = false;
+	bool uiOpen = false, inRange = false;
 	public GameObject uiPanel;
 	public string text;
 	private GameController gameController;
