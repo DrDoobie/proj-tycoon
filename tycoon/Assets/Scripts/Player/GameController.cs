@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-	[HideInInspector] public bool paused;
+	[HideInInspector] public bool paused, buildMode;
 
 	private void Update () {
 		PauseController();
+		BuildController();
 	}
 
 	private void PauseController () {
@@ -25,6 +26,13 @@ public class GameController : MonoBehaviour {
 
 		CursorLock(true);
 		Time.timeScale = 1.0f;
+	}
+
+	private void BuildController () {
+		if(Input.GetButtonDown("Build Mode"))
+		{
+			buildMode = !buildMode;
+		}
 	}
 
 	public void CursorLock (bool bol) {
