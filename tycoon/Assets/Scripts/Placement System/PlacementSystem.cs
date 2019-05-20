@@ -13,20 +13,23 @@ public class PlacementSystem : MonoBehaviour {
 	}
 
 	private void Update () {
-		if(gameController.buildMode)
-		{
-			Controller();
-			Debug.Log("AWD");
-		}
+		Controller();
 	}
 
 	private void Controller () {
-		RaycastHit hit;
-
-		if(Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit))
+		if(gameController.buildMode)
 		{
-			prefab.SetActive(true);
-			prefab.transform.position = hit.point;
+			RaycastHit hit;
+
+			if(Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit))
+			{
+				prefab.SetActive(true);
+				prefab.transform.position = hit.point;
+			}
+
+			return;
 		}
+
+		prefab.SetActive(false);
 	}
 }
