@@ -21,33 +21,6 @@ public class Interactable : MonoBehaviour {
 	}
 
 	private void InteractionController () {
-		/*if(uiOpen)
-		{
-			if(Input.GetButtonDown("Pause"))
-			{
-				uiOpen = false;
-			}
-
-			uiPanel.SetActive(true);
-
-		} else {
-			uiPanel.SetActive(false);
-		}
-
-		if(inRange && !uiOpen)
-		{
-			if(Input.GetButtonDown("Interact"))
-			{
-				uiOpen = !uiOpen;
-				gameController.paused = true;
-			}
-
-			interactText.text = "'e' to " + text;
-			return;
-		}
-
-		interactText.text = null; */
-
 		if(uiOpen)
 		{
 			uiPanel.SetActive(true);
@@ -60,6 +33,7 @@ public class Interactable : MonoBehaviour {
 		{
 			if(Input.GetButtonDown("Interact"))
 			{
+				gameController.paused = !gameController.paused;
 				uiOpen = !uiOpen;
 			}
 
