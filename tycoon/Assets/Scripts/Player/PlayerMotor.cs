@@ -6,17 +6,29 @@ public class PlayerMotor : MonoBehaviour
 {
 
     private bool isJumping;
+    private Camera mainCam;
     private CharacterController controller;
     [SerializeField] private float walkSpeed = 5.0f, sprintSpeed = 7.5f, jumpMultiplier = 10.0f, slopeForce = 2.0f;
     [SerializeField] private AnimationCurve jumpCurve;
     private float movementSpeed;
 
     private void Awake() {
+        mainCam = Camera.main;
         controller = GetComponent<CharacterController>();
     }
 
     private void Update() {
+        ConstantRay();
         MovementController();
+    }
+
+    private void ConstantRay () {
+        RaycastHit hit;
+
+		if(Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit))
+		{
+            //
+		}
     }
 
     private void MovementController() {

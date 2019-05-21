@@ -243,6 +243,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27cd9b20049b25044bac74cda3469b38, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &145155581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1203593655075224, guid: 751665dc74861f34e97313759fdc6d50,
+    type: 2}
+  m_PrefabInternal: {fileID: 1541820277}
 --- !u!1 &161560630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,6 +1031,11 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114560001082990330, guid: 751665dc74861f34e97313759fdc6d50,
+        type: 2}
+      propertyPath: infoPanel
+      value: 
+      objectReference: {fileID: 145155581}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 751665dc74861f34e97313759fdc6d50, type: 2}
   m_IsPrefabAsset: 0

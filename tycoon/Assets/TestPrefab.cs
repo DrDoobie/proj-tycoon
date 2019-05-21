@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class TestPrefab : MonoBehaviour {
 
-	public bool testBool;
+	bool isOpen;
 	public GameObject infoPanel;
 
 	private void Update () {
-        NewMethod();
+        PanelController();
     }
-
-    private void NewMethod () {
-        if(testBool)
+	
+    private void PanelController () {
+        if(isOpen)
         {
             infoPanel.SetActive(true);
             return;
