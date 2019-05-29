@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCam: {fileID: 20118005769155390}
+  prefab: {fileID: 0}
 --- !u!114 &114076582882194280
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -9,11 +9,9 @@ public class Interactable : MonoBehaviour {
 	public GameObject uiPanel;
 	public string text;
 	private GameController gameController;
-	private Text interactText;
 
 	private void Awake () {
 		gameController = FindObjectOfType<GameController>();
-		interactText = GameObject.FindWithTag("InteractText").GetComponent<Text>();
 	}
 
 	private void Update () {
@@ -37,11 +35,8 @@ public class Interactable : MonoBehaviour {
 				uiOpen = !uiOpen;
 			}
 
-			interactText.text = "'e' to " + text;
 			return;
 		}
-
-		interactText.text = null;
 	}
 
 	private void OnTriggerEnter (Collider other) {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlacementPrefab : MonoBehaviour {
 
+    public bool isPlaceable;
     public GameObject objPrefab;
     public Material[] material;
     Renderer rend;
@@ -11,6 +12,8 @@ public class PlacementPrefab : MonoBehaviour {
 	private void Awake () {
         rend = GetComponent<Renderer>();
         rend.enabled = true;
+
+        isPlaceable = true;
     }
 
     private void Update () {
@@ -21,6 +24,12 @@ public class PlacementPrefab : MonoBehaviour {
         if(Input.GetButtonDown("Fire1"))
         {
             Instantiate(objPrefab, transform.parent.position, transform.parent.rotation);
+        }
+
+        if(!isPlaceable)
+        {
+            rend.sharedMaterial = material[1];
+            return;
         }
 
         rend.sharedMaterial = material[0];

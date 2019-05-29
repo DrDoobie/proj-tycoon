@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222772375451458752}
   - component: {fileID: 114359569593146222}
   - component: {fileID: 114852904444228230}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,8 +38,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4714272229153588}
   - component: {fileID: 65015643465960122}
+  - component: {fileID: 135513866955153704}
   - component: {fileID: 114560001082990330}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Clay Pot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +57,7 @@ GameObject:
   - component: {fileID: 4056102016265688}
   - component: {fileID: 33090782640341440}
   - component: {fileID: 23475445415642140}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +75,7 @@ GameObject:
   - component: {fileID: 223043364793687144}
   - component: {fileID: 114209773941513796}
   - component: {fileID: 114108527154015002}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +92,7 @@ GameObject:
   - component: {fileID: 224502395910204048}
   - component: {fileID: 222037181143934452}
   - component: {fileID: 114272226069686862}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Info.text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,8 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de1ec2e041c7e2749b179a26a2eb0d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testBool: 0
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 1203593655075224}
 --- !u!114 &114852904444228230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -382,6 +382,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796a64b0ed314db4aa9113bab9ec5569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &135513866955153704
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334338948763608}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!222 &222037181143934452
 CanvasRenderer:
   m_ObjectHideFlags: 1

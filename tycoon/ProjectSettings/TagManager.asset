@@ -7,6 +7,7 @@ TagManager:
   - InteractText
   - MoneyText
   - PrefabCollider
+  - PlacementPrefab
   layers:
   - Default
   - TransparentFX

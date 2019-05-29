@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TestPrefab : MonoBehaviour {
 
-	bool isOpen;
+	bool isOpen, inRange;
 	public GameObject infoPanel;
 
 	private void Update () {
@@ -12,6 +12,14 @@ public class TestPrefab : MonoBehaviour {
     }
 	
     private void PanelController () {
+        if(inRange)
+        {
+            if(Input.GetButtonDown("Interact"))
+            {
+                isOpen = !isOpen;
+            }
+        }
+
         if(isOpen)
         {
             infoPanel.SetActive(true);
@@ -19,5 +27,18 @@ public class TestPrefab : MonoBehaviour {
         }
 
         infoPanel.SetActive(false);
+    }
+
+    private void OnTriggerEnter (Collider other) {
+        inRange = true;
+    }
+
+    private void OnTriggerExit (Collider other) {
+        inRange = false;
+
+        if(isOpen)
+        {
+            isOpen = !isOpen;
+        }
     }
 }
